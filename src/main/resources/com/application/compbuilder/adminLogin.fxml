@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.compbuilder.mainController">
+   <children>
+      <Text layoutX="205.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CompBuilder Admin">
+         <font>
+            <Font name="Hiragino Sans W1" size="20.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="94.0" fitWidth="172.0" layoutX="214.0" layoutY="74.0" pickOnBounds="true">
+         <image>
+            <Image url="@54-545021_lock-icon-png-graphic-cave-verification-logo-icon.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="adminUsername" layoutX="220.0" layoutY="188.0" promptText="Username" />
+      <Button fx:id="quitButton" layoutX="273.0" layoutY="284.0" mnemonicParsing="false" onAction="#adminValidation" text="Log In" />
+      <Button layoutX="271.0" layoutY="324.0" mnemonicParsing="false" onAction="#disposeAdminLoginPage" text="Cancel" />
+      <PasswordField fx:id="adminPassword" layoutX="220.0" layoutY="235.0" promptText="Password" />
+   </children>
+</AnchorPane>

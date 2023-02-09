@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.compbuilder.HelloController{">
+   <children>
+      <Label alignment="CENTER" prefHeight="26.0" prefWidth="420.0" text="Verification">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+      </Label>
+      <PasswordField fx:id="passField" onAction="#validate" promptText="Password">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets left="30.0" right="30.0" top="40.0" />
+         </VBox.margin>
+      </PasswordField>
+      <Button mnemonicParsing="false" onAction="#validate" prefHeight="22.0" prefWidth="405.0" text="Enter">
+         <VBox.margin>
+            <Insets left="140.0" right="130.0" top="30.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

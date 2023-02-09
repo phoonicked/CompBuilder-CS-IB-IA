@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.compbuilder.addComponentController">
+    <children>
+        <TextField fx:id="storageName" layoutX="70.0" layoutY="38.0" />
+        <TextField fx:id="storagePrice" layoutX="70.0" layoutY="86.0" />
+        <TextField fx:id="storageCache" layoutX="75.0" layoutY="134.0" />
+        <TextField fx:id="storageCapacity" layoutX="84.0" layoutY="180.0" />
+        <TextField fx:id="storageInterface" layoutX="84.0" layoutY="229.0" />
+        <Text layoutX="23.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+        <Text layoutX="25.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+        <Text layoutX="25.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cache:" />
+        <Text layoutX="24.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capacity:" />
+        <Text layoutX="24.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interface:" />
+        <TextField fx:id="storageType" layoutX="70.0" layoutY="272.0" />
+        <Text layoutX="24.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" />
+        <Button layoutX="300.0" layoutY="64.0" mnemonicParsing="false" onAction="#addStorageToTable" text="Add" />
+        <Button fx:id="cancelButton" layoutX="383.0" layoutY="65.0" mnemonicParsing="false" onAction="#windowDispose" text="Cancel" />
+    </children>
+</AnchorPane>

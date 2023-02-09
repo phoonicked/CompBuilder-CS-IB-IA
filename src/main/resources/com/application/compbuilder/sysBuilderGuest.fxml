@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane layoutY="-20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.compbuilder.sysBuildController">
+    <children>
+        <TextField fx:id="displayStorageName" disable="true" editable="false" layoutX="148.0" layoutY="271.0" opacity="0.0" prefHeight="26.0" prefWidth="23.0" />
+        <TextField fx:id="displayPSName" disable="true" editable="false" layoutX="148.0" layoutY="395.0" opacity="0.0" prefHeight="26.0" prefWidth="23.0" />
+        <TextField fx:id="displayMotherboardName" disable="true" editable="false" layoutX="148.0" layoutY="159.0" opacity="0.0" prefHeight="26.0" prefWidth="23.0" />
+        <TextField fx:id="displayMotherboardPrice" editable="false" layoutX="360.0" layoutY="159.0" opacity="0.0" />
+        <TextField fx:id="displayPSPrice" editable="false" layoutX="360.0" layoutY="395.0" opacity="0.0" />
+        <TextField fx:id="displayStoragePrice" editable="false" layoutX="360.0" layoutY="271.0" opacity="0.0" />
+        <TextField fx:id="displayGPUModel" editable="false" layoutX="148.0" layoutY="331.0" opacity="0.0" prefHeight="23.0" prefWidth="26.0" />
+        <Text fx:id="totalPrice" layoutX="350.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price:" />
+        <TextField fx:id="displayTotalPrice" editable="false" layoutX="415.0" layoutY="504.0" prefHeight="26.0" prefWidth="75.0" />
+        <TextField fx:id="displayMonPrice" editable="false" layoutX="360.0" layoutY="449.0" opacity="0.0" />
+        <TextField fx:id="displayRAMPrice" editable="false" layoutX="360.0" layoutY="214.0" opacity="0.0" />
+        <TextField fx:id="displayGPUPrice" editable="false" layoutX="360.0" layoutY="331.0" opacity="0.0" />
+        <TextField fx:id="displayCPUPrice" editable="false" layoutX="360.0" layoutY="106.0" opacity="0.0" />
+        <Line endX="646.9464111328125" layoutX="203.0" layoutY="87.0" startX="-183.24354553222656" />
+        <Text fx:id="memorySelection" layoutX="32.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Memory" wrappingWidth="84.7626953125">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="147.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selection" wrappingWidth="84.7626953125" />
+        <Text layoutX="32.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPU" wrappingWidth="84.7626953125">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="30.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motherboard" wrappingWidth="97.77137756347656">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="28.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Component" wrappingWidth="84.7626953125" />
+        <Text layoutX="32.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Storage" wrappingWidth="84.7626953125">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="32.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Video Card" wrappingWidth="84.7626953125">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="33.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monitor" wrappingWidth="84.7626953125">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="34.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Power Supply" wrappingWidth="115.5104751586914">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <AnchorPane fx:id="addGPU" disable="true" layoutX="241.0" layoutY="86.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="549.0" prefWidth="677.0">
+            <children>
+                <TableView fx:id="gpuTable" layoutX="-4.0" layoutY="2.0" onMouseClicked="#displayGPUModel" prefHeight="411.0" prefWidth="665.0">
+                    <columns>
+                        <TableColumn fx:id="colGPUName" prefWidth="190.0" text="Name" />
+                        <TableColumn fx:id="colGPUPrice" prefWidth="97.0" text="Price" />
+                        <TableColumn fx:id="colGPUChipset" prefWidth="118.0" text="Chipset" />
+                        <TableColumn fx:id="colGPUMemory" prefWidth="128.5" text="Memory" />
+                        <TableColumn fx:id="colGPUCoreClock" prefWidth="118.0" text="Core Clock" />
+                        <TableColumn fx:id="colGPUBoostClock" prefWidth="118.0" text="Boost Clock" />
+                        <TableColumn fx:id="colGPUColour" prefWidth="118.0" text="Colour" />
+                        <TableColumn fx:id="colGPULength" prefWidth="118.0" text="Length" />
+                    </columns>
+                </TableView>
+                <Text layoutX="156.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="309.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand:" wrappingWidth="151.95571899414062">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="searchTextGPU" layoutX="156.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" promptText="None" />
+                <Text layoutX="471.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <ChoiceBox fx:id="chooseGPUBrand" layoutX="309.0" layoutY="450.0" prefHeight="28.0" prefWidth="135.0" />
+                <ChoiceBox fx:id="chooseGPUPrice" layoutX="471.0" layoutY="449.0" prefHeight="28.0" prefWidth="177.0" />
+                <Button layoutX="309.0" layoutY="501.0" mnemonicParsing="false" onAction="#filterGPUDB" prefHeight="26.0" prefWidth="62.0" text="Search" />
+                <Button layoutX="395.0" layoutY="501.0" mnemonicParsing="false" onAction="#resetGPUTable" prefHeight="26.0" prefWidth="98.0" text="Reset Table" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="addCPU" disable="true" layoutX="228.0" layoutY="87.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="549.0" prefWidth="677.0">
+            <children>
+                <TableView fx:id="cpuTable" layoutX="-3.0" layoutY="-1.0" onMouseClicked="#displayCPUData" prefHeight="411.0" prefWidth="678.0">
+                    <columns>
+                        <TableColumn fx:id="colCPUName" prefWidth="152.5" text="Name" />
+                        <TableColumn fx:id="colCPUPrice" prefWidth="93.0" text="Price" />
+                        <TableColumn fx:id="colCPUCoreCount" prefWidth="86.0" text="Core Count" />
+                        <TableColumn fx:id="colCPUCoreClock" prefWidth="125.0" text="Core Clock" />
+                        <TableColumn fx:id="colCPUBoostClock" editable="false" prefWidth="91.5" text="Boost Clock" />
+                        <TableColumn fx:id="colCPUtdp" editable="false" prefWidth="91.5" text="Thermal Design Power" />
+                        <TableColumn fx:id="colCPUIntegratedGraphics" editable="false" prefWidth="91.5" text="Integrated Graphics" />
+                        <TableColumn fx:id="colCPUsmt" editable="false" prefWidth="91.5" text="Simultaneous Multithreading" />
+                    </columns>
+                </TableView>
+                <Text layoutX="156.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="309.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand:" wrappingWidth="151.95571899414062">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="searchTextCPU" layoutX="156.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" promptText="None" />
+                <Text layoutX="471.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <ChoiceBox fx:id="chooseCPUBrand" layoutX="309.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" />
+                <ChoiceBox fx:id="chooseCPUPrice" layoutX="471.0" layoutY="449.0" prefHeight="28.0" prefWidth="135.0" />
+                <Button layoutX="309.0" layoutY="501.0" mnemonicParsing="false" onAction="#filterCPUDB" prefHeight="26.0" prefWidth="62.0" text="Search" />
+                <Button layoutX="395.0" layoutY="501.0" mnemonicParsing="false" onAction="#resetCPUTable" prefHeight="26.0" prefWidth="98.0" text="Reset Table" />
+            </children>
+        </AnchorPane>
+        <Button fx:id="selectCPU" layoutX="184.0" layoutY="105.0" mnemonicParsing="false" onAction="#showCPUTable" text="+" />
+        <Button fx:id="selectMotherboard" layoutX="184.0" layoutY="159.0" mnemonicParsing="false" onAction="#showMotherboardTable" text="+" />
+        <Button fx:id="selectRAM" layoutX="184.0" layoutY="214.0" mnemonicParsing="false" onAction="#showRAMTable" text="+" />
+        <Button fx:id="selectStorage" layoutX="184.0" layoutY="271.0" mnemonicParsing="false" onAction="#showStorageTable" text="+" />
+        <Button fx:id="selectGPU" layoutX="184.0" layoutY="333.0" mnemonicParsing="false" onAction="#showGPUTable" text="+" />
+        <Button fx:id="selectPS" layoutX="185.0" layoutY="395.0" mnemonicParsing="false" onAction="#showPowerSupplyTable" text="+" />
+        <Button fx:id="selectMon" layoutX="185.0" layoutY="449.0" mnemonicParsing="false" onAction="#showMonTable" text="+" />
+        <Line endX="-27.15658187866211" endY="3.0517578125E-5" layoutX="41.0" layoutY="499.0" startX="813.1680908203125" startY="3.0517578125E-5" />
+        <AnchorPane fx:id="addRAM" disable="true" layoutX="238.0" layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="549.0" prefWidth="677.0">
+            <children>
+                <TableView fx:id="ramTable" layoutY="-1.0" onMouseClicked="#displaySelectedRAM" prefHeight="411.0" prefWidth="664.0">
+                    <columns>
+                        <TableColumn fx:id="colRAMName" prefWidth="234.5" text="Name" />
+                        <TableColumn fx:id="colRAMPrice" prefWidth="89.0" text="Price" />
+                        <TableColumn fx:id="colRAMSpeed" prefWidth="92.0" text="Speed" />
+                        <TableColumn fx:id="colRAMModule" prefWidth="75.0" text="Module" />
+                        <TableColumn fx:id="colRAMColour" prefWidth="132.5" text="Colour" />
+                        <TableColumn fx:id="colRAMFirstWordLatency" prefWidth="132.5" text="First Word Latency" />
+                        <TableColumn fx:id="colRAMCasLatency" prefWidth="60.0" text="Column Address Strobe Latency" />
+                    </columns>
+                </TableView>
+                <Text layoutX="156.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="309.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand:" wrappingWidth="151.95571899414062">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="searchTextRAM" layoutX="156.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" promptText="None" />
+                <Text layoutX="471.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <ChoiceBox fx:id="chooseRAMBrand" layoutX="309.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" />
+                <ChoiceBox fx:id="chooseRAMPrice" layoutX="471.0" layoutY="449.0" prefHeight="28.0" prefWidth="135.0" />
+                <Button layoutX="309.0" layoutY="501.0" mnemonicParsing="false" onAction="#filterRAMDB" prefHeight="26.0" prefWidth="62.0" text="Search" />
+                <Button layoutX="395.0" layoutY="501.0" mnemonicParsing="false" onAction="#resetRAMTable" prefHeight="26.0" prefWidth="98.0" text="Reset Table" />
+            </children>
+        </AnchorPane>
+        <TextField fx:id="displayCPUModel" disable="true" editable="false" layoutX="148.0" layoutY="106.0" opacity="0.0" prefHeight="26.0" prefWidth="23.0" />
+        <TextField fx:id="displayRAMModel" disable="true" editable="false" layoutX="148.0" layoutY="214.0" opacity="0.0" prefHeight="26.0" prefWidth="23.0" />
+        <Text layoutX="360.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" wrappingWidth="68.00447108180538" />
+        <AnchorPane fx:id="addMon" disable="true" layoutX="225.0" layoutY="86.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="549.0" prefWidth="677.0">
+            <children>
+                <TextField fx:id="searchTextMon" layoutX="156.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" promptText="None" />
+                <Text layoutX="156.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="309.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand:" wrappingWidth="151.95571899414062">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="monTable" layoutX="80.0" onMouseClicked="#displayMonModel" prefHeight="411.0" prefWidth="597.0">
+                    <columns>
+                        <TableColumn fx:id="colMonName" editable="false" prefWidth="178.5" text="Name" />
+                        <TableColumn fx:id="colMonPrice" editable="false" prefWidth="85.0" text="Price" />
+                        <TableColumn fx:id="colMonScreenSize" editable="false" prefWidth="75.0" text="Screen Size" />
+                        <TableColumn fx:id="colMonResolution" editable="false" prefWidth="75.0" text="Resolution" />
+                        <TableColumn fx:id="colMonRefRate" prefWidth="103.0" text="Refresh Rate" />
+                        <TableColumn fx:id="colMonResponseTime" prefWidth="60.0" text="Response Time" />
+                        <TableColumn fx:id="colMonPanelType" prefWidth="95.5" text="Panel Type" />
+                        <TableColumn fx:id="colMonAspectRatio" prefWidth="95.5" text="Aspect Ratio" />
+                    </columns>
+                </TableView>
+                <ChoiceBox fx:id="chooseMonBrand" layoutX="309.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" />
+                <Text layoutX="471.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <ChoiceBox fx:id="chooseMonitorPrice" layoutX="471.0" layoutY="449.0" prefHeight="28.0" prefWidth="135.0" />
+                <Button layoutX="309.0" layoutY="501.0" mnemonicParsing="false" onAction="#filterMonDB" prefHeight="26.0" prefWidth="62.0" text="Search" />
+                <Button layoutX="395.0" layoutY="501.0" mnemonicParsing="false" onAction="#resetMonTable" prefHeight="26.0" prefWidth="98.0" text="Reset Table" />
+            </children>
+        </AnchorPane>
+        <TextField fx:id="displayMonModel" editable="false" layoutX="148.0" layoutY="449.0" opacity="0.0" prefHeight="23.0" prefWidth="26.0" />
+        <Button fx:id="cancelCPUSelection" layoutX="122.0" layoutY="105.0" mnemonicParsing="false" onAction="#resetCPUSelection" opacity="0.0" style="-fx-background-color: FFFFF;" text="x" />
+        <Button fx:id="cancelMotherboardSelection" layoutX="122.0" layoutY="159.0" mnemonicParsing="false" onAction="#resetMotherboardSelection" opacity="0.0" style="-fx-background-color: FFFFF;" text="x" />
+        <Button fx:id="cancelRAMSelection" layoutX="122.0" layoutY="214.0" mnemonicParsing="false" onAction="#resetRAMSelection" opacity="0.0" style="-fx-background-color: FFFFF;" text="x" />
+        <Button fx:id="cancelStorageSelection" layoutX="122.0" layoutY="271.0" mnemonicParsing="false" onAction="#resetStorageSelection" opacity="0.0" style="-fx-background-color: FFFFF;" text="x" />
+        <Button fx:id="cancelGPUSelection" layoutX="122.0" layoutY="331.0" mnemonicParsing="false" onAction="#resetGPUSelection" opacity="0.0" style="-fx-background-color: FFFFF;" text="x" />
+        <Button fx:id="cancelMonSelection" layoutX="122.0" layoutY="449.0" mnemonicParsing="false" onAction="#resetMonSelection" opacity="0.0" style="-fx-background-color: FFFFF;" text="x" />
+        <AnchorPane fx:id="addMotherboard" disable="true" layoutX="225.0" layoutY="86.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="549.0" prefWidth="677.0">
+            <children>
+                <TextField fx:id="searchTextMotherboard" layoutX="156.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" promptText="None" />
+                <Text layoutX="156.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="309.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand:" wrappingWidth="151.95571899414062">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="motherboardTable" layoutX="80.0" onMouseClicked="#displayMotherboardData" prefHeight="411.0" prefWidth="597.0">
+                    <columns>
+                        <TableColumn fx:id="colMBName" editable="false" prefWidth="178.5" text="Name" />
+                        <TableColumn fx:id="colMBPrice" editable="false" prefWidth="75.0" text="Price" />
+                        <TableColumn fx:id="colMBSocket" editable="false" prefWidth="75.0" text="Socket" />
+                        <TableColumn fx:id="colMBMemory" prefWidth="85.0" text="Memory" />
+                        <TableColumn fx:id="colMBMemorySlots" minWidth="0.0" text="Memory Slots" />
+                        <TableColumn fx:id="colMBColour" prefWidth="85.0" text="Colour" />
+                    </columns>
+                </TableView>
+                <ChoiceBox fx:id="chooseMBBrand" layoutX="309.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" />
+                <Text layoutX="471.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <ChoiceBox fx:id="chooseMotherboardPrice" layoutX="471.0" layoutY="449.0" prefHeight="28.0" prefWidth="135.0" />
+                <Button layoutX="309.0" layoutY="501.0" mnemonicParsing="false" onAction="#filterMotherboardDB" prefHeight="26.0" prefWidth="62.0" text="Search" />
+                <Button layoutX="395.0" layoutY="501.0" mnemonicParsing="false" onAction="#resetMotherboardTable" prefHeight="26.0" prefWidth="98.0" text="Reset Table" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="addPowerSupply" disable="true" layoutX="225.0" layoutY="86.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="549.0" prefWidth="677.0">
+            <children>
+                <TextField fx:id="searchTextPS" layoutX="156.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" promptText="None" />
+                <Text layoutX="156.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="309.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand:" wrappingWidth="151.95571899414062">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="powerSupplyTable" layoutX="80.0" onMouseClicked="#displayPowerSupplyData" prefHeight="411.0" prefWidth="597.0">
+                    <columns>
+                        <TableColumn fx:id="colPSName" editable="false" prefWidth="178.5" text="Name" />
+                        <TableColumn fx:id="colPSPrice" editable="false" prefWidth="75.0" text="Price" />
+                        <TableColumn fx:id="colPSWattage" editable="false" prefWidth="75.0" text="Wattage" />
+                        <TableColumn fx:id="colPSModular" prefWidth="85.0" text="Modular" />
+                        <TableColumn fx:id="colPSColour" prefWidth="85.0" text="Colour" />
+                    </columns>
+                </TableView>
+                <ChoiceBox fx:id="choosePSBrand" layoutX="309.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" />
+                <Text layoutX="471.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <ChoiceBox fx:id="choosePowerSupplyPrice" layoutX="471.0" layoutY="449.0" prefHeight="28.0" prefWidth="135.0" />
+                <Button layoutX="309.0" layoutY="501.0" mnemonicParsing="false" onAction="#filterPowerSupplyDB" prefHeight="26.0" prefWidth="62.0" text="Search" />
+                <Button layoutX="395.0" layoutY="501.0" mnemonicParsing="false" onAction="#resetPowerSupplyTable" prefHeight="26.0" prefWidth="98.0" text="Reset Table" />
+            </children>
+        </AnchorPane>
+        <Button fx:id="cancelPSSelection" layoutX="122.0" layoutY="395.0" mnemonicParsing="false" onAction="#resetPowerSupplySelection" opacity="0.0" style="-fx-background-color: FFFFF;" text="x" />
+        <AnchorPane fx:id="addStorage" disable="true" layoutX="225.0" layoutY="86.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="549.0" prefWidth="677.0">
+            <children>
+                <TextField fx:id="searchTextStorage" layoutX="156.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" promptText="None" />
+                <Text layoutX="156.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="309.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand:" wrappingWidth="151.95571899414062">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="storageTable" onMouseClicked="#displayStorageData" prefHeight="411.0" prefWidth="677.0">
+                    <columns>
+                        <TableColumn fx:id="colStorageName" editable="false" prefWidth="178.5" text="Name" />
+                        <TableColumn fx:id="colStoragePrice" editable="false" prefWidth="75.0" text="Price" />
+                        <TableColumn fx:id="colStorageCapacity" editable="false" prefWidth="75.0" text="Capacity" />
+                        <TableColumn fx:id="colStorageType" prefWidth="85.0" text="Type" />
+                        <TableColumn fx:id="colStorageCache" prefWidth="85.0" text="Cache" />
+                        <TableColumn fx:id="colStorageInterface" prefWidth="85.0" text="Interface" />
+                    </columns>
+                </TableView>
+                <ChoiceBox fx:id="chooseStorageBrand" layoutX="309.0" layoutY="450.0" prefHeight="26.0" prefWidth="135.0" />
+                <Text layoutX="471.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="135.32044982910156">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <ChoiceBox fx:id="chooseStoragePrice" layoutX="471.0" layoutY="449.0" prefHeight="28.0" prefWidth="135.0" />
+                <Button layoutX="309.0" layoutY="501.0" mnemonicParsing="false" onAction="#filterStorageDB" prefHeight="26.0" prefWidth="62.0" text="Search" />
+                <Button layoutX="395.0" layoutY="501.0" mnemonicParsing="false" onAction="#resetStorageTable" prefHeight="26.0" prefWidth="98.0" text="Reset Table" />
+            </children>
+        </AnchorPane>
+        <Button layoutX="81.0" layoutY="540.0" mnemonicParsing="false" onAction="#resetWindow" text="Reset" />
+        <Button fx:id="quitButton" layoutX="78.0" layoutY="609.0" mnemonicParsing="false" onAction="#windowDispose" text="Cancel" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.compbuilder.adminEditController">
+   <children>
+      <Button layoutX="41.0" layoutY="69.0" mnemonicParsing="false" onAction="#showCPUTable" text="CPU" />
+      <Button fx:id="editCPU" disable="true" layoutX="188.0" layoutY="468.0" mnemonicParsing="false" onAction="#BootAddCPU" opacity="0.0" text="Add" />
+      <Button fx:id="deleteCPU" disable="true" layoutX="328.0" layoutY="469.0" mnemonicParsing="false" onAction="#removeCPU" opacity="0.0" text="Delete" />
+      <AnchorPane layoutX="118.0" layoutY="-1.0" prefHeight="462.0" prefWidth="590.0">
+         <children>
+            <TableView fx:id="cpuTable" disable="true" opacity="0.0" prefHeight="452.0" prefWidth="590.0">
+              <columns>
+                <TableColumn fx:id="colCPUName" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="colCPUPrice" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="colCPUCoreCount" prefWidth="75.0" text="Core Count" />
+                  <TableColumn fx:id="colCPUCoreClock" prefWidth="75.0" text="Core Clock" />
+                  <TableColumn fx:id="colCPUBoostClock" prefWidth="75.0" text="Boost Clock" />
+                  <TableColumn fx:id="colCPUtdp" prefWidth="75.0" text="TDP" />
+                  <TableColumn fx:id="colCPUIntegratedGraphics" prefWidth="75.0" text="IG" />
+                  <TableColumn fx:id="colCPUsmt" prefWidth="75.0" text="SMT" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="gpuTable" disable="true" layoutX="118.0" layoutY="-1.0" opacity="0.0" prefHeight="462.0" prefWidth="590.0">
+         <columns>
+            <TableColumn fx:id="colGPUName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colGPUPrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="colGPUChipset" prefWidth="75.0" text="Chipset" />
+            <TableColumn fx:id="colGPUMemory" prefWidth="75.0" text="Memory" />
+            <TableColumn fx:id="colGPUCoreClock" prefWidth="75.0" text="Core Clock" />
+            <TableColumn fx:id="colGPUBoostClock" prefWidth="75.0" text="Boost Clock" />
+            <TableColumn fx:id="colGPUColour" prefWidth="75.0" text="Colour" />
+            <TableColumn fx:id="colGPULength" prefWidth="75.0" text="Length" />
+         </columns>
+      </TableView>
+      <Button fx:id="editGPU" disable="true" layoutX="188.0" layoutY="468.0" mnemonicParsing="false" onAction="#BootAddGPU" opacity="0.0" text="Add" />
+      <Button layoutX="14.0" layoutY="127.0" mnemonicParsing="false" onAction="#showGPUTable" text="Video Memory" />
+      <Button fx:id="cancelButton" layoutX="445.0" layoutY="469.0" mnemonicParsing="false" onAction="#windowDispose" text="Cancel" />
+      <Button layoutX="31.0" layoutY="181.0" mnemonicParsing="false" onAction="#showRAMTable" text="Memory" />
+      <TableView fx:id="ramTable" disable="true" layoutX="118.0" layoutY="-1.0" opacity="0.0" prefHeight="462.0" prefWidth="590.0">
+         <columns>
+            <TableColumn fx:id="colRAMName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colRAMPrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="colRAMSpeed" prefWidth="75.0" text="Speed" />
+            <TableColumn fx:id="colRAMModule" prefWidth="75.0" text="Module" />
+            <TableColumn fx:id="colRAMColour" prefWidth="75.0" text="Colour" />
+            <TableColumn fx:id="colRAMFirstWordLatency" prefWidth="75.0" text="First World Latency" />
+            <TableColumn fx:id="colRAMCasLatency" prefWidth="75.0" text="CAS Latency" />
+         </columns>
+      </TableView>
+      <Button fx:id="editRAM" disable="true" layoutX="188.0" layoutY="468.0" mnemonicParsing="false" onAction="#BootAddRAM" opacity="0.0" text="Add" />
+      <Button fx:id="editMotherboard" disable="true" layoutX="188.0" layoutY="468.0" mnemonicParsing="false" onAction="#BootAddMotherboard" opacity="0.0" text="Add" />
+      <Button fx:id="editMonitor" disable="true" layoutX="188.0" layoutY="468.0" mnemonicParsing="false" onAction="#BootAddMonitor" opacity="0.0" text="Add" />
+      <Button fx:id="editStorage" disable="true" layoutX="188.0" layoutY="468.0" mnemonicParsing="false" onAction="#BootAddStorage" opacity="0.0" text="Add" />
+      <Button fx:id="editPowerSupply" disable="true" layoutX="188.0" layoutY="468.0" mnemonicParsing="false" onAction="#BootAddPowerSupply" opacity="0.0" text="Add" />
+      <TableView fx:id="monitorTable" disable="true" layoutX="118.0" layoutY="-1.0" opacity="0.0" prefHeight="462.0" prefWidth="590.0">
+         <columns>
+            <TableColumn fx:id="colMonName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colMonPrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="colMonScreenSize" prefWidth="75.0" text="Screen Size" />
+            <TableColumn fx:id="colMonResolution" prefWidth="75.0" text="Resolution" />
+            <TableColumn fx:id="colMonRefRate" prefWidth="75.0" text="Refresh Rate" />
+            <TableColumn fx:id="colMonResponseTime" prefWidth="75.0" text="Response Time" />
+            <TableColumn fx:id="colMonPanelType" prefWidth="75.0" text="Panel Type" />
+            <TableColumn fx:id="colMonAspectRatio" prefWidth="75.0" text="Aspect Ratio" />
+         </columns>
+      </TableView>
+      <Button layoutX="31.0" layoutY="227.0" mnemonicParsing="false" onAction="#showStorageTable" text="Storage" />
+      <Button layoutX="31.0" layoutY="281.0" mnemonicParsing="false" onAction="#showMonitorTable" text="Monitor" />
+      <Button layoutX="17.0" layoutY="341.0" mnemonicParsing="false" onAction="#showMotherboardTable" text="Motherboard" />
+      <Button layoutX="16.0" layoutY="399.0" mnemonicParsing="false" onAction="#showPowerSupplyTable" text="Power Supply" />
+      <TableView fx:id="motherboardTable" disable="true" layoutX="118.0" layoutY="-1.0" opacity="0.0" prefHeight="462.0" prefWidth="590.0">
+         <columns>
+            <TableColumn fx:id="colMBName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colMBPrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="colMBSocket" prefWidth="75.0" text="Socket" />
+            <TableColumn fx:id="colMBMemory" prefWidth="75.0" text="Memory" />
+            <TableColumn fx:id="colMBMemorySlots" prefWidth="75.0" text="Memory Slots" />
+            <TableColumn fx:id="colMBColour" prefWidth="75.0" text="Colour" />
+         </columns>
+      </TableView>
+      <TableView fx:id="powerSupplyTable" disable="true" layoutX="118.0" layoutY="-1.0" opacity="0.0" prefHeight="462.0" prefWidth="590.0">
+         <columns>
+            <TableColumn fx:id="colPSName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colPSPrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="colPSWattage" prefWidth="75.0" text="Wattage" />
+            <TableColumn fx:id="colPSModular" prefWidth="75.0" text="Modular" />
+            <TableColumn fx:id="colPSColour" prefWidth="75.0" text="Colour" />
+         </columns>
+      </TableView>
+      <TableView fx:id="storageTable" disable="true" layoutX="118.0" layoutY="-1.0" opacity="0.0" prefHeight="462.0" prefWidth="590.0">
+         <columns>
+            <TableColumn fx:id="colStorageName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colStoragePrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="colStorageCapacity" prefWidth="75.0" text="Capacity" />
+            <TableColumn fx:id="colStorageType" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="colStorageCache" prefWidth="75.0" text="Cache" />
+            <TableColumn fx:id="colStorageInterface" prefWidth="75.0" text="Interface" />
+         </columns>
+      </TableView>
+      <Button fx:id="deleteGPU" disable="true" layoutX="328.0" layoutY="469.0" mnemonicParsing="false" onAction="#removeGPU" opacity="0.0" text="Delete" />
+      <Button fx:id="deleteRAM" disable="true" layoutX="328.0" layoutY="469.0" mnemonicParsing="false" onAction="#removeRAM" opacity="0.0" text="Delete" />
+      <Button fx:id="deleteMotherboard" disable="true" layoutX="328.0" layoutY="469.0" mnemonicParsing="false" onAction="#removeMotherboard" opacity="0.0" text="Delete" />
+      <Button fx:id="deleteMonitor" disable="true" layoutX="328.0" layoutY="469.0" mnemonicParsing="false" onAction="#removeMonitor" opacity="0.0" text="Delete" />
+      <Button fx:id="deleteStorage" disable="true" layoutX="328.0" layoutY="469.0" mnemonicParsing="false" onAction="#removeStorage" opacity="0.0" text="Delete" />
+      <Button fx:id="deletePowerSupply" disable="true" layoutX="328.0" layoutY="469.0" mnemonicParsing="false" onAction="#removePowerSupply" opacity="0.0" text="Delete" />
+   </children>
+</AnchorPane>

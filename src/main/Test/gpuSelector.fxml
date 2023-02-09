@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.compbuilder.gpuController">
+    <children>
+        <TableView fx:id="gpuTable" layoutX="333.0" layoutY="-1.0" prefHeight="548.0" prefWidth="504.0">
+            <columns>
+                <TableColumn fx:id="colModel" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="colBrand" prefWidth="75.0" text="Brand" />
+                <TableColumn fx:id="colBenchmark" prefWidth="75.0" text="Benchmark" />
+                <TableColumn fx:id="colPartNumber" prefWidth="75.0" text="Part Number" />
+            </columns>
+        </TableView>
+        <Text layoutX="21.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="135.32044982910156">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Text>
+        <Text layoutX="20.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand:" wrappingWidth="151.95571899414062">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Text>
+        <TextField fx:id="searchText" layoutX="20.0" layoutY="60.0" prefHeight="25.0" prefWidth="173.0" promptText="None" />
+        <Text layoutX="21.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="135.32044982910156">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Text>
+        <ChoiceBox fx:id="chooseBrand" layoutX="21.0" layoutY="144.0" prefHeight="26.0" prefWidth="177.0" />
+        <ChoiceBox layoutX="21.0" layoutY="227.0" prefHeight="28.0" prefWidth="177.0" />
+        <Button layoutX="78.0" layoutY="284.0" mnemonicParsing="false" onAction="#filterDB" prefHeight="26.0" prefWidth="62.0" text="Search" />
+        <Button layoutX="78.0" layoutY="339.0" mnemonicParsing="false" onAction="#resetTable" prefHeight="26.0" prefWidth="62.0" text="Reset" />
+    </children>
+</AnchorPane>

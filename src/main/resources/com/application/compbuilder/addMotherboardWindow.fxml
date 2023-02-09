@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.compbuilder.addComponentController">
+    <children>
+        <TextField fx:id="motherboardName" layoutX="70.0" layoutY="38.0" />
+        <TextField fx:id="motherboardPrice" layoutX="70.0" layoutY="86.0" />
+        <TextField fx:id="motherboardSocket" layoutX="72.0" layoutY="134.0" />
+        <TextField fx:id="motherboardMemory" layoutX="84.0" layoutY="180.0" />
+        <TextField fx:id="motherboardMemorySlots" layoutX="109.0" layoutY="229.0" />
+        <Text layoutX="23.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+        <Text layoutX="25.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+        <Text layoutX="25.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Socket:" />
+        <Text layoutX="24.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Memory:" />
+        <Text layoutX="24.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Memory Slots:" />
+        <TextField fx:id="motherboardColour" layoutX="84.0" layoutY="272.0" />
+        <Text layoutX="24.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colour:" />
+        <Button layoutX="300.0" layoutY="64.0" mnemonicParsing="false" onAction="#addMotherboardToTable" text="Add" />
+        <Button fx:id="cancelButton" layoutX="383.0" layoutY="65.0" mnemonicParsing="false" onAction="#windowDispose" text="Cancel" />
+    </children>
+</AnchorPane>

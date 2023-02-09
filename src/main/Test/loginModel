@@ -1,0 +1,25 @@
+package customer_detail;
+
+import org.sqlite.SQLiteConnection;
+
+import java.sql.*;
+
+public class loginModel {
+    Connection connection;
+    public loginModel(){
+        connection = sqliteConnection.Connector();
+        if(connection == null){
+            System.exit(1);
+        }
+    }
+
+    public boolean isDbConnected(){
+        try{
+            return !connection.isClosed();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+}
